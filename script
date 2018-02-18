@@ -1,0 +1,3 @@
+#!/bin/bash
+
+java JavaSoundRecorder & python2 tuner.py; python2 findKey.py | python2 chords.py; afplay instrumental.wav & afplay test.wav

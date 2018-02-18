@@ -1,0 +1,3 @@
+#!/bin/bash
+
+afplay instrumental.wav & afplay test.wav
