@@ -1,0 +1,26 @@
+#Jeffrey Zhu
+#Hack on the Hill IV
+#Reading Wav Files
+
+import wave, struct
+import numpy, numpy.fft as fft
+import array
+
+waveFile = wave.open('c.wav', 'r')
+
+length = waveFile.getnframes()
+
+waveInfo = []
+waveMag = []
+
+for i in range(0,length):
+    waveData = waveFile.readframes(1)
+    data = struct.unpack("<i", waveData)
+    waveInfo.append(data)
+
+for i in range(0,len(waveInfo)):
+	waveMag.append(fft.fft(waveInfo[i]))
+
+print waveMag[0]
+
+Z = (waveMag
