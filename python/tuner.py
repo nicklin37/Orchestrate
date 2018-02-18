@@ -99,6 +99,6 @@ while time.time() < t_end:
 
     if num_frames >= FRAMES_PER_FFT:
         if ('{:7.2f}' > 300):
-            file.write('{:>3s} '.format(note_name(n0)))
+            file.write('{:>3s}'.format(note_name(n0)) + '\n')
 
 file.close()
